@@ -169,6 +169,62 @@ El modelo organiza los datos en una tabla de hechos central con cuatro tablas de
 
 **Métricas de la tabla de hechos:** Pre_Semester_GPA, Post_Semester_GPA, Cambio_GPA, Skill_Retention_Score, Riesgo_Academico, Estudio_Total.
 
+```mermaid
+erDiagram
+    FACT_ESTUDIANTE {
+        int Student_ID PK
+        float Pre_Semester_GPA
+        float Post_Semester_GPA
+        float Cambio_GPA
+        float Skill_Retention_Score
+        int Riesgo_Academico
+        float Estudio_Total
+        int perfil_id FK
+        int uso_ia_id FK
+        int institucion_id FK
+        int bienestar_id FK
+    }
+
+    DIM_PERFIL {
+        int perfil_id PK
+        string Major_Category
+        string Year_of_Study
+        int Year_Encoded
+        string Prompt_Engineering_Skill
+        int Prompt_Skill_Encoded
+    }
+
+    DIM_USO_IA {
+        int uso_ia_id PK
+        float Weekly_GenAI_Hours
+        string Nivel_Uso_IA
+        string Primary_Use_Case
+        int Tool_Diversity
+        int Paid_Subscription
+        float Traditional_Study_Hours
+    }
+
+    DIM_INSTITUCION {
+        int institucion_id PK
+        string Institutional_Policy
+        int Policy_Encoded
+    }
+
+    DIM_BIENESTAR {
+        int bienestar_id PK
+        string Burnout_Risk_Level
+        int Burnout_Encoded
+        int Perceived_AI_Dependency
+        int Dependencia_Alta
+        int Anxiety_Level_During_Exams
+    }
+
+    FACT_ESTUDIANTE }o--|| DIM_PERFIL : "perfil_id"
+    FACT_ESTUDIANTE }o--|| DIM_USO_IA : "uso_ia_id"
+    FACT_ESTUDIANTE }o--|| DIM_INSTITUCION : "institucion_id"
+    FACT_ESTUDIANTE }o--|| DIM_BIENESTAR : "bienestar_id"
+```
+
 ### Reglas de negocio
 
 | Regla | Descripción |
