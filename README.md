@@ -306,3 +306,108 @@ El proyecto confirma que la relación entre uso de IA y rendimiento académico e
 La dependencia percibida y la habilidad de prompting son los dos factores relacionados con la IA que más influyen en los resultados. Los estudiantes que reportan alta dependencia retienen significativamente menos habilidades, mientras que los que saben formular buenos prompts mejoran más su GPA durante el semestre. Esto indica que la formación en uso efectivo de IA puede tener un impacto académico real.
 
 La recomendación más directa que se desprende de este análisis es que las instituciones deberían enfocarse no en prohibir el uso de IA, sino en desarrollar en sus estudiantes la capacidad de usarla de forma reflexiva y crítica, preservando al mismo tiempo las habilidades cognitivas que las herramientas generativas no pueden reemplazar.
+
+
+# Conclusiones e Interpretación de Resultados MODELO PREDICTIVO
+
+## Análisis de Regresión: Predicción del Cambio en GPA
+
+Se implementaron tres modelos de regresión para predecir el cambio en el GPA de los estudiantes: Regresión Lineal, Árbol de Decisión y Random Forest.
+
+La Regresión Lineal obtuvo un RMSE de 0.1565, un MAE de 0.1231 y un R² de 0.2870. Esto indica que el modelo logra capturar parte de la relación entre las variables predictoras y el cambio en el GPA, aunque su capacidad explicativa es limitada debido a la complejidad del fenómeno estudiado.
+
+El Árbol de Decisión mejoró ligeramente los resultados con un RMSE de 0.1530, un MAE de 0.1193 y un R² de 0.3187. Esto demuestra que existen relaciones no lineales entre las variables que no son capturadas completamente por la regresión lineal.
+
+El modelo Random Forest presentó el mejor desempeño con un RMSE de 0.1440, un MAE de 0.1132 y un R² de 0.3967. Este resultado indica que aproximadamente el 39.67% de la variabilidad observada en el cambio del GPA puede ser explicada por las variables disponibles en el conjunto de datos.
+
+Aunque el R² no es extremadamente alto, el resultado es razonable debido a que el rendimiento académico está influenciado por múltiples factores que no se encuentran registrados en el dataset, tales como motivación personal, situación económica, factores familiares, dificultades particulares de cada asignatura y condiciones emocionales de los estudiantes.
+
+La validación cruzada produjo un R² promedio de 0.3884 con una desviación estándar de 0.0067. Esto indica que el modelo mantiene un comportamiento estable al evaluarse sobre diferentes particiones de los datos y que no depende excesivamente de una única muestra de entrenamiento.
+
+El gráfico de valores reales frente a predichos mostró que el modelo captura adecuadamente la tendencia general de los datos. Sin embargo, se observan errores más notorios en los casos extremos, lo cual es común en problemas relacionados con comportamiento humano y desempeño académico.
+
+## Interpretación de las Variables Más Importantes para el Cambio en GPA
+
+La variable con mayor importancia fue Traditional_Study_Hours. Esto sugiere que las horas de estudio tradicional continúan siendo el factor más relevante para explicar las variaciones en el rendimiento académico.
+
+La variable Year_Encoded apareció como la segunda más importante, indicando que el semestre o nivel académico del estudiante influye significativamente en su evolución académica.
+
+Weekly_GenAI_Hours se ubicó entre las variables más influyentes. Este resultado evidencia que el uso de herramientas de inteligencia artificial tiene una relación medible con los cambios en el rendimiento académico.
+
+Pre_Semester_GPA también presentó una alta importancia, indicando que el desempeño previo sigue siendo un predictor relevante del desempeño futuro.
+
+Prompt_Skill_Encoded apareció dentro de las variables más importantes. Esto sugiere que la capacidad para formular instrucciones efectivas a las herramientas de inteligencia artificial puede estar asociada con mejores resultados académicos.
+
+Los resultados muestran que la inteligencia artificial tiene influencia en el desempeño estudiantil, pero que el estudio tradicional continúa siendo el principal determinante del éxito académico.
+
+---
+
+## Análisis de Clasificación: Predicción del Riesgo Académico
+
+El objetivo de esta etapa fue identificar estudiantes con riesgo académico utilizando técnicas de clasificación supervisada.
+
+La distribución de la variable objetivo mostró que únicamente el 6.8% de los estudiantes se encuentran en condición de riesgo académico. Esto implica un problema de clases desbalanceadas, donde la mayoría de los registros pertenecen a estudiantes sin riesgo.
+
+Debido a este desbalance, la métrica Accuracy por sí sola no resulta suficiente para evaluar adecuadamente el desempeño de los modelos. Por esta razón se utilizaron también las métricas F1-Score y AUC-ROC.
+
+La Regresión Logística obtuvo una exactitud de 89.08%, un F1-Score de 0.5389 y un AUC de 0.9659. Aunque logró una buena capacidad discriminativa, presentó dificultades para identificar correctamente los estudiantes en riesgo.
+
+El Árbol de Decisión mejoró los resultados alcanzando una exactitud de 92.14%, un F1-Score de 0.6173 y un AUC de 0.9604.
+
+Random Forest obtuvo una exactitud de 93.76%, un F1-Score de 0.6705 y un AUC de 0.9771, mostrando una mejora considerable en la detección de estudiantes en riesgo.
+
+El modelo Gradient Boosting presentó el mejor desempeño general con una exactitud de 96.93%, un F1-Score de 0.7665 y un AUC de 0.9822.
+
+Estos resultados indican que Gradient Boosting posee una capacidad sobresaliente para diferenciar estudiantes en riesgo de aquellos que no presentan riesgo académico.
+
+El valor de AUC-ROC de 0.9822 demuestra que el modelo tiene una excelente capacidad de discriminación y que es altamente efectivo para clasificar correctamente ambos grupos.
+
+La validación cruzada mostró un F1 promedio de 0.7660 con una desviación estándar de 0.0046, indicando que el modelo es consistente y generaliza adecuadamente a nuevos datos.
+
+## Interpretación de las Variables Más Importantes para el Riesgo Académico
+
+La variable más importante fue Pre_Semester_GPA.
+
+Este resultado indica que el rendimiento académico previo es el principal predictor del riesgo académico futuro. Los estudiantes con promedios bajos en semestres anteriores tienen una mayor probabilidad de presentar dificultades académicas posteriormente.
+
+Skill_Retention_Score apareció como la segunda variable más relevante. Esto sugiere que la capacidad para retener y comprender conocimientos tiene una influencia directa sobre el riesgo académico.
+
+Weekly_GenAI_Hours también presentó importancia significativa. Esto indica que el uso de inteligencia artificial tiene una relación observable con la probabilidad de encontrarse en riesgo académico.
+
+Traditional_Study_Hours y Estudio_Total continúan apareciendo entre los factores más relevantes, reforzando la importancia de los hábitos de estudio tradicionales.
+
+Perceived_AI_Dependency mostró relevancia dentro del modelo. Esto sugiere que existe una asociación estadística entre la dependencia percibida de herramientas de inteligencia artificial y el riesgo académico.
+
+Es importante aclarar que la importancia de una variable no implica causalidad. Los resultados indican asociaciones estadísticas observadas en los datos, pero no permiten concluir relaciones causa-efecto de manera definitiva.
+
+## Interpretación de las Matrices de Confusión
+
+El modelo Gradient Boosting clasificó correctamente 9189 estudiantes sin riesgo y 504 estudiantes en riesgo.
+
+Los falsos positivos fueron 129 casos, es decir, estudiantes clasificados como en riesgo cuando realmente no lo estaban.
+
+Los falsos negativos fueron 178 casos, correspondientes a estudiantes que sí estaban en riesgo pero que no fueron detectados por el modelo.
+
+En un contexto educativo, los falsos negativos representan el error más costoso debido a que implican dejar sin intervención a estudiantes que realmente necesitan apoyo académico.
+
+A pesar de ello, el número de falsos negativos fue relativamente bajo en comparación con el tamaño total de la muestra evaluada, lo que demuestra una capacidad adecuada del modelo para la detección temprana de estudiantes en riesgo.
+
+## Conclusiones Generales
+
+Los modelos de aprendizaje supervisado permitieron identificar patrones relevantes asociados tanto al rendimiento académico como al riesgo académico de los estudiantes.
+
+Random Forest fue el mejor modelo para predecir el cambio en GPA, logrando el menor error y la mayor capacidad explicativa entre los modelos evaluados.
+
+Gradient Boosting fue el mejor modelo para identificar estudiantes en riesgo académico, obteniendo los mejores resultados en Accuracy, F1-Score y AUC-ROC.
+
+Las horas de estudio tradicional fueron el factor más importante para explicar las variaciones en el rendimiento académico.
+
+El desempeño académico previo fue el principal predictor del riesgo académico futuro.
+
+El uso de herramientas de inteligencia artificial mostró una influencia significativa tanto en la predicción del cambio en GPA como en la clasificación del riesgo académico.
+
+La habilidad para utilizar correctamente herramientas de inteligencia artificial, especialmente mediante técnicas de prompt engineering, mostró una relación positiva con el desempeño académico.
+
+Los resultados sugieren que la inteligencia artificial puede convertirse en un apoyo importante para el aprendizaje, pero no reemplaza la importancia de los hábitos de estudio tradicionales.
+
+Los modelos desarrollados presentan niveles adecuados de estabilidad y generalización, lo que indica que podrían utilizarse como herramientas de apoyo para la toma de decisiones académicas y la identificación temprana de estudiantes que requieran acompañamiento institucional.
