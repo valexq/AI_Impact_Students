@@ -83,8 +83,9 @@ Limpiar y transformar el dataset crudo en una base confiable para el análisis, 
 | Manipulación de datos | pandas, numpy |
 | Visualización | matplotlib, seaborn |
 | Machine Learning | scikit-learn |
+| Business Intelligence | Power BI |
 | Notebooks | Jupyter Notebook |
-| Persistencia | CSV |
+| Persistencia | CSV, JSON, PBIX |
 
 ---
 
@@ -98,15 +99,28 @@ AI_Impact_Students/
 │   │   └── ai_student_impact.csv          # Dataset original (50,000 registros, 16 columnas)
 │   ├── cleaned/
 │   │   └── students_cleaned.csv           # Dataset limpio sin variables derivadas
-│   └── processed/
-│       └── students_model_ready.csv       # Dataset completo con variables derivadas y encodings
+│   ├── processed/
+│   │   └── students_model_ready.csv       # Dataset completo con variables derivadas y encodings
+│   └── bi/
+│       ├── FACT_ESTUDIANTE.csv            # Tabla de hechos del esquema estrella
+│       ├── DIM_PERFIL.csv                 # Dimensión de perfil académico
+│       ├── DIM_USO_IA.csv                 # Dimensión de hábitos de uso de IA
+│       ├── DIM_INSTITUCION.csv            # Dimensión de política institucional
+│       ├── DIM_BIENESTAR.csv              # Dimensión de bienestar y dependencia
+│       └── bi_kpis.json                   # KPIs y agregados del dashboard
 │
 ├── notebooks/
 │   ├── 01_etl.ipynb                       # ETL: limpieza, transformación y exportación
 │   ├── 02_eda.ipynb                       # EDA: análisis exploratorio y visualizaciones
-│   └── 03_modelos_predictivos.ipynb       # ML: regresión y clasificación supervisada
+│   └── 03_bi.ipynb                        # BI: modelo dimensional, KPIs y visualizaciones
 │
-├── reports/                               # Gráficas generadas por el EDA y el modelado
+├── powerbi/
+│   └── DASHBOARD.pbix                     # Dashboard interactivo de la fase 3
+│
+├── reports/
+│   ├── *.png                              # Gráficas previas de EDA y modelado
+│   ├── Fase3_BI_Informe.docx              # Informe formal de la fase 3
+│   └── bi/                                # Gráficas y KPIs visuales del dashboard
 │
 ├── requirements.txt
 ├── README.md
@@ -129,7 +143,7 @@ Se aplicó encoding ordinal a Year_of_Study (Freshman=1 hasta Graduate=5), Promp
 | Estudio_Total | Horas tradicionales + horas de IA por semana |
 | Riesgo_Academico | 1 si Post_GPA < 2.5 o Cambio_GPA < -0.3 |
 
-**Resultado:** `students_cleaned.csv` (50,000 filas, 16 columnas) y `students_model_ready.csv` (50,000 filas, 21 columnas).
+**Resultado:** `students_cleaned.csv` (50,000 filas, 16 columnas) y `students_model_ready.csv` (50,000 filas, 26 columnas).
 
 ---
 
@@ -281,7 +295,7 @@ erDiagram
 
 ## Fase 4 — Modelado Predictivo
 
-Se entrenaron seis modelos en total: tres de regresión para predecir el Cambio_GPA y cuatro de clasificación para predecir el Riesgo_Academico. Se usó validación cruzada de 5 folds, análisis de importancia de variables y matrices de confusión para evaluar cada modelo.
+Se entrenaron siete modelos en total: tres de regresión para predecir el Cambio_GPA y cuatro de clasificación para predecir el Riesgo_Academico. Se usó validación cruzada de 5 folds, análisis de importancia de variables y matrices de confusión para evaluar cada modelo.
 
 Con 50,000 registros cada fold de validación cruzada cubre 10,000 estudiantes, lo que otorga alta confiabilidad estadística a todas las métricas reportadas.
 
@@ -295,7 +309,7 @@ Variable objetivo binaria. Solo el 6.8% de los estudiantes (3,412) está en ries
 
 El GPA previo es la variable más importante en todos los modelos, seguido por la dependencia percibida de IA, la retención de habilidades y la habilidad de prompting. Random Forest y Gradient Boosting son los modelos más robustos en ambas tareas.
 
-*(Las métricas exactas se obtienen al ejecutar el notebook 03_modelos_predictivos.ipynb)*
+*(Las métricas exactas se documentan en la fase de modelado predictivo.)*
 
 ---
 

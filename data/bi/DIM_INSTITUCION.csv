@@ -1,0 +1,4 @@
+institucion_id,Institutional_Policy,Policy_Encoded,Descripcion_Politica
+1,Strict_Ban,0,Prohibición total del uso de IA en trabajos académicos
+2,Allowed_With_Citation,1,Uso permitido siempre que se cite la herramienta
+3,Actively_Encouraged,2,Uso fomentado activamente como parte del proceso

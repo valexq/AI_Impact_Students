@@ -1,0 +1,288 @@
+{
+  "kpis": {
+    "total_estudiantes": 50000,
+    "horas_ia_promedio": 8.43,
+    "horas_ia_mediana": 5.8,
+    "horas_estudio_tradicional": 11.21,
+    "gpa_pre_promedio": 3.146,
+    "gpa_post_promedio": 3.349,
+    "cambio_gpa_promedio": 0.203,
+    "retencion_promedio": 75.8,
+    "dependencia_alta_pct": 6.29,
+    "riesgo_academico_pct": 6.82,
+    "uso_alto_pct": 17.08,
+    "suscripcion_pago_pct": 42.31
+  },
+  "por_nivel_uso": [
+    {
+      "Nivel_Uso_IA": "Bajo",
+      "estudiantes": 22567,
+      "cambio_gpa": 0.195,
+      "retencion": 75.973,
+      "riesgo_pct": 6.501,
+      "horas_ia": 2.247
+    },
+    {
+      "Nivel_Uso_IA": "Medio",
+      "estudiantes": 18891,
+      "cambio_gpa": 0.227,
+      "retencion": 76.996,
+      "riesgo_pct": 5.691,
+      "horas_ia": 9.026
+    },
+    {
+      "Nivel_Uso_IA": "Alto",
+      "estudiantes": 8542,
+      "cambio_gpa": 0.173,
+      "retencion": 72.688,
+      "riesgo_pct": 10.173,
+      "horas_ia": 23.433
+    }
+  ],
+  "por_carrera": [
+    {
+      "Major_Category": "STEM",
+      "estudiantes": 15059,
+      "gpa_post": 3.363,
+      "cambio_gpa": 0.217,
+      "retencion": 76.8,
+      "riesgo_pct": 6.913
+    },
+    {
+      "Major_Category": "Arts",
+      "estudiantes": 5933,
+      "gpa_post": 3.344,
+      "cambio_gpa": 0.197,
+      "retencion": 75.661,
+      "riesgo_pct": 6.826
+    },
+    {
+      "Major_Category": "Medical",
+      "estudiantes": 6476,
+      "gpa_post": 3.353,
+      "cambio_gpa": 0.201,
+      "retencion": 75.485,
+      "riesgo_pct": 6.578
+    },
+    {
+      "Major_Category": "Business",
+      "estudiantes": 12538,
+      "gpa_post": 3.336,
+      "cambio_gpa": 0.194,
+      "retencion": 75.256,
+      "riesgo_pct": 7.146
+    },
+    {
+      "Major_Category": "Humanities",
+      "estudiantes": 9994,
+      "gpa_post": 3.346,
+      "cambio_gpa": 0.198,
+      "retencion": 75.254,
+      "riesgo_pct": 6.434
+    }
+  ],
+  "por_anio": [
+    {
+      "Year_Encoded": 1,
+      "Year_of_Study": "Freshman",
+      "estudiantes": 11031,
+      "cambio_gpa": 0.132,
+      "retencion": 74.658,
+      "horas_ia": 8.447,
+      "riesgo_pct": 8.948
+    },
+    {
+      "Year_Encoded": 2,
+      "Year_of_Study": "Sophomore",
+      "estudiantes": 9860,
+      "cambio_gpa": 0.177,
+      "retencion": 74.812,
+      "horas_ia": 8.446,
+      "riesgo_pct": 7.394
+    },
+    {
+      "Year_Encoded": 3,
+      "Year_of_Study": "Junior",
+      "estudiantes": 11045,
+      "cambio_gpa": 0.226,
+      "retencion": 74.77,
+      "horas_ia": 8.376,
+      "riesgo_pct": 6.166
+    },
+    {
+      "Year_Encoded": 4,
+      "Year_of_Study": "Senior",
+      "estudiantes": 10634,
+      "cambio_gpa": 0.243,
+      "retencion": 77.768,
+      "horas_ia": 8.459,
+      "riesgo_pct": 5.699
+    },
+    {
+      "Year_Encoded": 5,
+      "Year_of_Study": "Graduate",
+      "estudiantes": 7430,
+      "cambio_gpa": 0.252,
+      "retencion": 77.508,
+      "horas_ia": 8.406,
+      "riesgo_pct": 5.491
+    }
+  ],
+  "por_prompting": [
+    {
+      "Prompt_Skill_Encoded": 1,
+      "Prompt_Engineering_Skill": "Beginner",
+      "estudiantes": 18495,
+      "cambio_gpa": 0.185,
+      "retencion": 71.101
+    },
+    {
+      "Prompt_Skill_Encoded": 2,
+      "Prompt_Engineering_Skill": "Intermediate",
+      "estudiantes": 17696,
+      "cambio_gpa": 0.187,
+      "retencion": 75.825
+    },
+    {
+      "Prompt_Skill_Encoded": 3,
+      "Prompt_Engineering_Skill": "Advanced",
+      "estudiantes": 13809,
+      "cambio_gpa": 0.248,
+      "retencion": 82.054
+    }
+  ],
+  "por_politica": [
+    {
+      "Policy_Encoded": 0,
+      "Institutional_Policy": "Strict_Ban",
+      "estudiantes": 9788,
+      "horas_ia": 8.37,
+      "cambio_gpa": 0.187,
+      "riesgo_pct": 7.673,
+      "dependencia_pct": 6.069
+    },
+    {
+      "Policy_Encoded": 1,
+      "Institutional_Policy": "Allowed_With_Citation",
+      "estudiantes": 25224,
+      "horas_ia": 8.42,
+      "cambio_gpa": 0.208,
+      "riesgo_pct": 6.589,
+      "dependencia_pct": 6.411
+    },
+    {
+      "Policy_Encoded": 2,
+      "Institutional_Policy": "Actively_Encouraged",
+      "estudiantes": 14988,
+      "horas_ia": 8.478,
+      "cambio_gpa": 0.206,
+      "riesgo_pct": 6.659,
+      "dependencia_pct": 6.232
+    }
+  ],
+  "por_burnout": [
+    {
+      "Burnout_Encoded": 0,
+      "Burnout_Risk_Level": "Low",
+      "estudiantes": 16369,
+      "horas_ia": 4.644,
+      "retencion": 76.402,
+      "ansiedad": 3.928
+    },
+    {
+      "Burnout_Encoded": 1,
+      "Burnout_Risk_Level": "Medium",
+      "estudiantes": 21144,
+      "horas_ia": 7.349,
+      "retencion": 76.243,
+      "ansiedad": 4.17
+    },
+    {
+      "Burnout_Encoded": 2,
+      "Burnout_Risk_Level": "High",
+      "estudiantes": 12487,
+      "horas_ia": 15.215,
+      "retencion": 74.253,
+      "ansiedad": 4.889
+    }
+  ],
+  "por_caso_uso": [
+    {
+      "Primary_Use_Case": "Debugging/Troubleshooting",
+      "estudiantes": 12295,
+      "cambio_gpa": 0.249,
+      "retencion": 78.069,
+      "horas_ia": 9.401
+    },
+    {
+      "Primary_Use_Case": "Copywriting/Drafting",
+      "estudiantes": 12011,
+      "cambio_gpa": 0.2,
+      "retencion": 75.231,
+      "horas_ia": 7.628
+    },
+    {
+      "Primary_Use_Case": "Ideation",
+      "estudiantes": 10721,
+      "cambio_gpa": 0.2,
+      "retencion": 75.52,
+      "horas_ia": 8.398
+    },
+    {
+      "Primary_Use_Case": "Summarizing_Reading",
+      "estudiantes": 8633,
+      "cambio_gpa": 0.197,
+      "retencion": 75.225,
+      "horas_ia": 8.17
+    },
+    {
+      "Primary_Use_Case": "Direct_Answer_Generation",
+      "estudiantes": 6340,
+      "cambio_gpa": 0.133,
+      "retencion": 73.719,
+      "horas_ia": 8.456
+    }
+  ],
+  "por_dependencia": [
+    {
+      "Perceived_AI_Dependency": 1,
+      "retencion": 76.0
+    },
+    {
+      "Perceived_AI_Dependency": 2,
+      "retencion": 76.48
+    },
+    {
+      "Perceived_AI_Dependency": 3,
+      "retencion": 76.48
+    },
+    {
+      "Perceived_AI_Dependency": 4,
+      "retencion": 76.35
+    },
+    {
+      "Perceived_AI_Dependency": 5,
+      "retencion": 75.85
+    },
+    {
+      "Perceived_AI_Dependency": 6,
+      "retencion": 74.9
+    },
+    {
+      "Perceived_AI_Dependency": 7,
+      "retencion": 72.47
+    },
+    {
+      "Perceived_AI_Dependency": 8,
+      "retencion": 69.4
+    },
+    {
+      "Perceived_AI_Dependency": 9,
+      "retencion": 65.56
+    },
+    {
+      "Perceived_AI_Dependency": 10,
+      "retencion": 63.55
+    }
+  ]
+}

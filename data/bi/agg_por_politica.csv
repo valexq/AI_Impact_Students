@@ -1,0 +1,4 @@
+Policy_Encoded,Institutional_Policy,estudiantes,horas_ia,cambio_gpa,riesgo_pct,dependencia_pct
+0,Strict_Ban,9788,8.37,0.187,7.673,6.069
+1,Allowed_With_Citation,25224,8.42,0.208,6.589,6.411
+2,Actively_Encouraged,14988,8.478,0.206,6.659,6.232

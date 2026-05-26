@@ -1,0 +1,6 @@
+Major_Category,estudiantes,gpa_pre,gpa_post,cambio_gpa,retencion,riesgo_pct,horas_ia
+STEM,15059,3.146,3.363,0.217,76.8,6.913,10.489
+Arts,5933,3.147,3.344,0.197,75.661,6.826,7.272
+Medical,6476,3.152,3.353,0.201,75.485,6.578,7.547
+Business,12538,3.142,3.336,0.194,75.256,7.146,8.276
+Humanities,9994,3.148,3.346,0.198,75.254,6.434,6.77

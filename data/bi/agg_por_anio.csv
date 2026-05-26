@@ -1,0 +1,6 @@
+Year_Encoded,Year_of_Study,estudiantes,cambio_gpa,retencion,horas_ia,riesgo_pct
+1,Freshman,11031,0.132,74.658,8.447,8.948
+2,Sophomore,9860,0.177,74.812,8.446,7.394
+3,Junior,11045,0.226,74.77,8.376,6.166
+4,Senior,10634,0.243,77.768,8.459,5.699
+5,Graduate,7430,0.252,77.508,8.406,5.491

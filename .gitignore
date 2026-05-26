@@ -23,6 +23,12 @@ env/
 .vscode/
 *.iml
 
+# Temporales de Office
+~$*
+
+# Auxiliares locales de Power BI
+powerbi/Tema_*.json
+
 # macOS
 .DS_Store
 

@@ -1,0 +1,4 @@
+Burnout_Encoded,Burnout_Risk_Level,estudiantes,horas_ia,cambio_gpa,retencion,ansiedad
+0,Low,16369,4.644,0.2,76.402,3.928
+1,Medium,21144,7.349,0.21,76.243,4.17
+2,High,12487,15.215,0.196,74.253,4.889
