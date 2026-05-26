@@ -27,7 +27,7 @@ env/
 ~$*
 
 # Auxiliares locales de Power BI
-powerbi/Tema_*.json
+powerbi/*.json
 
 # macOS
 .DS_Store

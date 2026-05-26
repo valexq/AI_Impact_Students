@@ -115,7 +115,7 @@ AI_Impact_Students/
 │   └── 03_bi.ipynb                        # BI: modelo dimensional, KPIs y visualizaciones
 │
 ├── powerbi/
-│   └── DASHBOARD.pbix                     # Dashboard interactivo de la fase 3
+│   └── DASHBOARD ZIUVAR.pbix              # Dashboard interactivo de la fase 3
 │
 ├── reports/
 │   ├── *.png                              # Gráficas previas de EDA y modelado
@@ -283,7 +283,7 @@ erDiagram
 
 **Insight 1 — El uso moderado de IA supera al intensivo:** Los estudiantes con uso Medio (5–15h/semana) muestran el mayor cambio promedio de GPA (+0.227), por encima del uso Bajo (+0.195) y del uso Alto (+0.173). Esto sugiere que existe un punto de rendimiento óptimo y que el uso excesivo tiene rendimientos decrecientes sobre el aprendizaje.
 
-**Insight 2 — La dependencia destruye retención:** Existe una caída continua y pronunciada en el puntaje de retención de habilidades conforme aumenta la dependencia percibida de IA, desde 76.5 puntos en dependencia=2 hasta 63.5 en dependencia=10. La diferencia entre los extremos es de 12.5 puntos, lo que representa más de un 16% de pérdida relativa.
+**Insight 2 — La dependencia reduce la retención:** Existe una caída continua y pronunciada en el puntaje de retención de habilidades conforme aumenta la dependencia percibida de IA, desde 76.5 puntos en dependencia=2 hasta 63.5 en dependencia=10. La diferencia entre los extremos es de 12.5 puntos, lo que representa más de un 16% de pérdida relativa.
 
 **Insight 3 — Burnout y uso intensivo van de la mano:** Los estudiantes con burnout High usan en promedio 15.21 horas semanales de IA, frente a 4.64 horas del grupo Low. La diferencia es de 3.3 veces, mostrando la correlación más fuerte y visualmente más clara del dataset.
 
