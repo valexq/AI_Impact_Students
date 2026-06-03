@@ -10,9 +10,9 @@
 
 # Proyecto de analítica de datos y modelo predictivo sobre el impacto de la IA generativa en estudiantes universitarios
 
-Análisis del comportamiento académico estudiantil en relación con el uso de IA generativa, aplicando un flujo ETL → EDA → BI → modelos predictivos supervisados.
+El crecimiento del uso de herramientas de inteligencia artificial generativa ha transformado la forma en que los estudiantes universitarios estudian, investigan y desarrollan actividades académicas. Este proyecto analiza un conjunto de datos de 50,000 estudiantes con el objetivo de identificar patrones asociados al uso de IA y su relación con el rendimiento académico, la retención de habilidades, la dependencia tecnológica y el bienestar estudiantil.
 
----
+Para ello se implementa un flujo completo de analítica de datos que incluye procesos ETL, análisis exploratorio (EDA), construcción de indicadores de negocio (BI) y modelos predictivos de aprendizaje supervisado para la predicción del cambio en GPA y la identificación de estudiantes en riesgo académico.
 
 ## Dataset
 
