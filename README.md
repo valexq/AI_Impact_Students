@@ -47,7 +47,7 @@ Análisis del comportamiento académico estudiantil en relación con el uso de I
 
 ---
 
-## Integrantes — Grupo 5
+## Integrantes - Grupo 5
 
 | Nombre               | Fase principal |
 |----------------------|----------------|
@@ -123,7 +123,7 @@ AI_Impact_Students/
 
 ---
 
-## Fase 1 — ETL: Extracción, Transformación y Carga
+## Fase 1 - ETL: Extracción, Transformación y Carga
 
 El dataset no presentó valores nulos ni registros duplicados, por lo que el trabajo se concentró en la transformación de tipos, el encoding de variables ordinales y la construcción de las cinco variables derivadas (ver diccionario).
 
@@ -140,7 +140,7 @@ Para `Major_Category` y `Primary_Use_Case` el one-hot encoding se reservó para 
 
 ---
 
-## Fase 2 — EDA: Análisis Exploratorio de Datos
+## Fase 2 - EDA: Análisis Exploratorio de Datos
 
 Se realizó una exploración en 14 secciones sobre el dataset procesado, cubriendo distribuciones de uso de IA y GPA, cambios por nivel de uso, correlación entre burnout y horas de IA, impacto de la dependencia sobre la retención, efecto de la habilidad de prompting, comportamiento por carrera y año de estudio, impacto de la política institucional y mapa de correlaciones entre variables numéricas.
 
@@ -154,7 +154,7 @@ Se realizó una exploración en 14 secciones sobre el dataset procesado, cubrien
 
 ---
 
-## Fase 3 — Inteligencia de Negocios: Modelo de datos y KPIs
+## Fase 3 - Inteligencia de Negocios: Modelo de datos y KPIs
 
 ### Modelo dimensional — Esquema Estrella
 
@@ -254,11 +254,11 @@ erDiagram
 
 ---
 
-## Fase 4 — Modelado Predictivo
+## Fase 4 - Modelado Predictivo
 
 Se entrenaron siete modelos en total: tres de regresión para predecir el Cambio_GPA y cuatro de clasificación para predecir el Riesgo_Academico. Se usó validación cruzada de 5 folds (10,000 estudiantes por fold), análisis de importancia de variables y matrices de confusión.
 
-### Regresión — predicción del Cambio_GPA
+### Regresión - predicción del Cambio_GPA
 
 Variable objetivo continua. Se excluyeron `Post_Semester_GPA` y `Riesgo_Academico` para evitar fuga de información.
 
@@ -272,7 +272,7 @@ Random Forest fue el mejor modelo. La validación cruzada produjo un R² promedi
 
 **Variables más importantes:** `Traditional_Study_Hours` > `Year_Encoded` > `Weekly_GenAI_Hours` > `Pre_Semester_GPA` > `Prompt_Skill_Encoded`.
 
-### Clasificación — predicción del Riesgo_Academico
+### Clasificación - predicción del Riesgo_Academico
 
 Variable objetivo binaria con desbalance de clases (6.8% positivo). Se usó `class_weight='balanced'` y se priorizaron F1-Score y AUC-ROC sobre accuracy. Se excluyeron `Post_Semester_GPA` y `Cambio_GPA` para evitar data leakage.
 
