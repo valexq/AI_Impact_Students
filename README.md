@@ -14,6 +14,17 @@ El crecimiento del uso de herramientas de inteligencia artificial generativa ha 
 
 Para ello se implementa un flujo completo de analítica de datos que incluye procesos ETL, análisis exploratorio (EDA), construcción de indicadores de negocio (BI) y modelos predictivos de aprendizaje supervisado para la predicción del cambio en GPA y la identificación de estudiantes en riesgo académico.
 
+## Integrantes - Grupo 5
+
+| Nombre               | Fase principal |
+|----------------------|----------------|
+| Ziuvar Ruiz          | Fase 3         |
+| Vanessa Alfaro       | Fases 1 y 2    |
+| Juan Manuel Valencia | Fases 4 y 5    |
+| Juan Cardona         | Fases 4 y 5    |
+
+---
+
 ## Dataset
 
 **Nombre:** Impact of IA on Students  
@@ -54,17 +65,6 @@ Para ello se implementa un flujo completo de analítica de datos que incluye pro
 | Dependencia_Alta | 1 si Perceived_AI_Dependency ≥ 7, 0 en caso contrario |
 | Estudio_Total | Traditional_Study_Hours + Weekly_GenAI_Hours |
 | Riesgo_Academico | 1 si Post_GPA < 2.5 o Cambio_GPA < −0.3 — variable objetivo de clasificación |
-
----
-
-## Integrantes - Grupo 5
-
-| Nombre               | Fase principal |
-|----------------------|----------------|
-| Ziuvar Ruiz          | Fase 3         |
-| Vanessa Alfaro       | Fases 1 y 2    |
-| Juan Manuel Valencia | Fases 4 y 5    |
-| Juan Cardona         | Fases 4 y 5    |
 
 ---
 
