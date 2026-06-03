@@ -1,3 +1,13 @@
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-1.x-013243?logo=numpy)](https://numpy.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-F7931E?logo=scikit-learn)](https://scikit-learn.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)](https://jupyter.org/)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-11557C)](https://matplotlib.org/)
+[![Seaborn](https://img.shields.io/badge/Seaborn-0.x-4C72B0)](https://seaborn.pydata.org/)
+[![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle)](https://www.kaggle.com/datasets/laveshjadon/ai-impact-on-students)
+
 # Proyecto de analítica de datos y modelo predictivo sobre el impacto de la IA generativa en estudiantes universitarios
 
 Análisis del comportamiento académico estudiantil en relación con el uso de IA generativa, aplicando un flujo ETL → EDA → BI → modelos predictivos supervisados.
